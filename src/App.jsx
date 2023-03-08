@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className={`app app-${theme()}`}>
-      <div className={`app-title-container app-title-container${theme()}`}>
+      <div className={`app-title-container app-title-container-${theme()}`}>
         <h1 className='app-title'>ToDo App</h1>
       </div>
 

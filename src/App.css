@@ -20,6 +20,10 @@
   color: #fff;
 }
 
+.app-title {
+  font-weight: bold;
+}
+
 .app-title-container {
   padding: 25px;
   margin-bottom: 15px;
