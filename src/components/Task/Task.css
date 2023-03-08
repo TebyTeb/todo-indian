@@ -1,0 +1,95 @@
+/* Task Main Card */
+.box-task-container {
+  display: flex;
+  text-align: left;
+  min-width: 250px;
+  flex: 1 0 21%;
+  margin: 5px;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+.box-task-container-light {
+  background-color: #ffe4c4;
+}
+.box-task-container-dark {
+  color: #fff;
+  background-color: #444;
+}
+
+/* Text div */
+.box-task {
+  padding: 15px 0;
+  margin-left: 25px;
+}
+.box-task-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.box-task-title-dark {
+  color: #ff9a00;
+}
+
+/* Buttons div */
+.box-task-action {
+  padding: 15px 10px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-around;
+  border-left: 1px solid #8b8b8b;
+}
+
+/* Buttons decorations */
+.box-task-btn {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  margin: 0 4px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.box-task-btn-completed-light {
+  margin-bottom: 5px;
+  color: #27ce4b;
+  background-color: #fff;
+}
+.box-task-btn-completed-light:hover {
+  background-color: #27ce4b;
+  color: #fff;
+}
+.box-task-btn-completed-dark {
+  margin-bottom: 5px;
+  color: #00da12;
+  background-color: #fff;
+}
+.box-task-btn-completed-dark:hover {
+  background-color: #00da1275;
+  color: #e0e0e0;
+}
+
+.box-task-btn-remove-light {
+  color: #ce2727;
+  background-color: #fff;
+}
+.box-task-btn-remove-light:hover {
+  color: #fff;
+  background-color: #ce2727;
+}
+.box-task-btn-remove-dark {
+  color: #fc2222;
+  background-color: #fff;
+}
+.box-task-btn-remove-dark:hover {
+  color: #e0e0e0;
+  background-color: #f8000085;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: gray;
+}
