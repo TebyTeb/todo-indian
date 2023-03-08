@@ -4,10 +4,16 @@ import './Task.css'
 //External plugins
 import { MdDoneAll, MdCancel } from 'react-icons/md'
 
-const Task = ({ task, theme, completeTask }) => {
+const Task = ({ task, theme, completeTask, removeTask }) => {
+
   const handleComplete = (e) => {
     e.preventDefault()
     completeTask(task.id)
+  }
+
+  const handleRemove = (e) => {
+    e.preventDefault()
+    removeTask(task.id)
   }
 
   return (
@@ -30,7 +36,10 @@ const Task = ({ task, theme, completeTask }) => {
         >
           <MdDoneAll size={24} />
         </button>
-        <button className={`box-task-btn box-task-btn-remove-${theme()}`}>
+        <button
+          className={`box-task-btn box-task-btn-remove-${theme()}`}
+          onClick={handleRemove}
+        >
           <MdCancel size={24} />
         </button>
       </div>
