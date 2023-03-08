@@ -15,6 +15,12 @@
   color: #fff;
   background-color: #444;
 }
+/*/-- Responsive --/*/
+@media only screen and (max-width: 310px) {
+  .box-task-container {
+    min-width: 75vw;
+  }
+}
 
 /* Text div */
 .box-task {

@@ -59,3 +59,15 @@
   padding: 15px;
   border-radius: 5px;
 }
+/*/-- Responsive --/*/
+@media only screen and (max-width: 600px) {
+  .box-tasks-container {
+    margin-top: 24px;
+  }
+}
+@media only screen and (max-width: 310px) {
+  .box-tasks-container {
+    margin: auto auto;
+    padding: 5px;
+  }
+}
