@@ -2,16 +2,29 @@
 import './App.css'
 
 // Hooks
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 //External plugins
 import Switch from 'react-switch'
 import { BsSunFill, BsFillMoonStarsFill } from 'react-icons/bs'
 
-function App() {
+// Components
+import TaskContainer from './components/TaskContainer'
+
+const App = () => {
+
+  // At first render, gathers tasks from localStorage if any, or sets empty array
+  const initialTasks = JSON.parse(localStorage.getItem('myTodoTasks')) ?? []
 
   const [dark, setDark] = useState(true)
+  const [tasks, setTasks] = useState(initialTasks)
 
+  // Saves tasks array to localStorage on change
+  useEffect(() => {
+    localStorage.setItem('myTodoTasks', JSON.stringify(tasks))
+  }, [tasks])
+
+  // Theme switcher aux function (avoids ternary mayhem)
   const theme = () => {
     return dark ? 'dark' : 'light'
   }
@@ -29,7 +42,7 @@ function App() {
         checkedIcon={<BsFillMoonStarsFill className='theme-switch' />}
       />
 
-      {/* <TaskContainer tasks={tasks} setTasks={setTasks} dark={dark} /> */}
+      <TaskContainer tasks={tasks} setTasks={setTasks} theme={theme}/>
     </div>
   )
 }
